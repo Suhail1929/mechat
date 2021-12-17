@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="record_audio">Démarrer l enregistrement</string>
+    <string name="hold_for_record">Tenir pour enregistrer</string>
+    <string name="release_for_end">finir l enregistrement</string>
+    <string name="listen_record">ecoutez</string>
+    <string name="stop_listen_record">arretez d ecouter</string>
+    <string name="stop_record">arretez l enregistrement</string>
+    <string name="send_record">Envoyez l enregistrement</string>
+</resources>

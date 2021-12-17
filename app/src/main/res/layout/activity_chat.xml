@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wpbackdemo"
+    android:orientation="vertical"
+    tools:context=".activities.ChatMainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_chat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lay_chat"
+        android:paddingHorizontal="8dp"
+        tools:itemCount="5"
+        tools:listitem="@layout/chat_item" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/lay_extra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lay_chat"
+        android:layout_marginHorizontal="16dp"
+        android:background="@color/white"
+        app:cardCornerRadius="6dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/btn_photo_lib"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_photo_lib"
+                app:tint="@color/colorAccent" />
+
+            <Space
+                android:layout_width="16dp"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/btn_loc"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_my_loc"
+                app:tint="@color/colorAccent" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <!--    chat lay-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/lay_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/add_img"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="-2dp"
+                android:onClick="openDialog"
+                android:padding="8dp"
+                android:src="@drawable/ic_add"
+                app:tint="@color/colorAccent" />
+
+            <EditText
+                android:id="@+id/et_message"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_toStartOf="@+id/img_mic"
+                android:layout_toEndOf="@+id/add_img"
+                android:background="@null"
+                android:hint="Enter message here..." />
+
+            <ImageView
+                android:id="@+id/img_mic"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_toStartOf="@+id/img_send"
+                android:onClick="openDialog"
+                android:padding="8dp"
+                android:src="@drawable/ic_mic"
+                app:tint="@color/colorAccent" />
+
+            <ImageView
+                android:id="@+id/img_send"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_alignParentEnd="true"
+                android:onClick="sendMsg"
+                android:padding="7dp"
+                android:src="@drawable/ic_send" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
